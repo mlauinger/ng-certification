@@ -29,4 +29,7 @@ export class DetailedForecastComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  back() {
+    this.router.navigate(['/'])
+  }
 }
