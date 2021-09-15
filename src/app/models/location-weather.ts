@@ -28,11 +28,18 @@ export interface Forecast {
 export interface DailyForecast {
   weather: Weather[]
   temp: {
-  day: number
-  eve: number
-  max: number
-  min: number
-  morn: number
-  night: number
+    day: number
+    eve: number
+    max: number
+    min: number
+    morn: number
+    night: number
   }
+  dt: number;
+}
+
+export interface LocationForecast {
+  forecast: DailyForecast[],
+  location: string,
+  name: string
 }
