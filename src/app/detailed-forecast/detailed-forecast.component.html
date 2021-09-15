@@ -9,8 +9,8 @@
       <li class="list-group-item" *ngFor="let day of data.forecast">
         {{day.dt * 1000 | date : 'mediumDate' : 'GMT+2'}}:
         {{day.weather [0].description}}
-        - Min: {{day.temp.min}}
-        - Max: {{day.temp.max}}
+        - Min: {{day.temp.min}} °C
+        - Max: {{day.temp.max}} °C
 
         <app-weather-icon [class]="'icon'" [condition]="day.weather[0].main"></app-weather-icon>
       </li>
