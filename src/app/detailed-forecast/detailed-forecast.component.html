@@ -12,7 +12,7 @@
         - Min: {{day.temp.min}}
         - Max: {{day.temp.max}}
 
-        <img class="icon" src="https://www.angulartraining.com/images/weather/rain.png">
+        <app-weather-icon [class]="'icon'" [condition]="day.weather.main"></app-weather-icon>
       </li>
     </ul>
   </div>

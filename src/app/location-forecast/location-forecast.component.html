@@ -14,6 +14,6 @@
   </div>
   <div>
     <span class="close" (click)="close()">×</span>
-    <img [src]='imageSrc'>
+    <app-weather-icon [condition]="location.weather[0]?.main"></app-weather-icon>
   </div>
 </div>
