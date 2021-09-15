@@ -1,0 +1,20 @@
+<div class="container-fluid" *ngIf="forecastData as data">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">5-day forecast for {{data.name}} ({{data.location}})</h3>
+
+    </div>
+    <ul class="list-group">
+      <!---->
+      <li class="list-group-item" *ngFor="let day of data.forecast">
+        {{day.dt * 1000 | date : 'mediumDate' : 'GMT+2'}}:
+        {{day.weather.description}}
+        - Min: {{day.temp.min}}
+        - Max: {{day.temp.max}}
+
+        <img class="icon" src="https://www.angulartraining.com/images/weather/rain.png">
+      </li>
+    </ul>
+  </div>
+  <button class="btn btn-success" tabindex="0" id="mainPageBtn">&lt; Back to main page</button>
+</div>

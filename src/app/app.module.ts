@@ -5,12 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LocationForecastComponent } from './location-forecast/location-forecast.component';
+import { DetailedForecastComponent } from './detailed-forecast/detailed-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LocationForecastComponent
+    LocationForecastComponent, DetailedForecastComponent
   ],
   imports: [
     BrowserModule,
@@ -19,4 +20,5 @@ import { LocationForecastComponent } from './location-forecast/location-forecast
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
